@@ -14,4 +14,11 @@ variables:
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Free Trial(a02e6ac5-f8b6-4b23-ab42-3f6e3bcb1fdc)'
+    appType: 'webAppLinux'
+    WebAppName: 
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
   displayName: 'dotnet build $(buildConfiguration)'
