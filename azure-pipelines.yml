@@ -23,3 +23,9 @@ steps:
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
   displayName: 'dotnet build $(buildConfiguration)'
   task: PublishBuildArtifacts@1
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    appType: 'webAppLinux'
+    WebAppName: 'Constosowebapp'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
