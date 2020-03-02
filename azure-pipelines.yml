@@ -28,4 +28,5 @@ steps:
     appType: 'webAppLinux'
     WebAppName: 'Constosowebapp'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    PublishBuildArtifacts@1
+    
+- task: PublishBuildArtifacts@1
