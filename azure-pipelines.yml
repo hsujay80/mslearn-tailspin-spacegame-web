@@ -22,3 +22,4 @@ steps:
     WebAppName: Constosowebapp
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
   displayName: 'dotnet build $(buildConfiguration)'
+  task: PublishBuildArtifacts@1
